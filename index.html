@@ -1,26 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Borat Sagdiyev</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="font-sans bg-gray-100">
+<body class="font-sans bg-gray-100 dark:bg-blue-900 dark:text-gray-100">
 
     <marquee behavior="scroll" direction="left" scrollamount="10">
-        <h1 class="text-3xl font-bold my-4">WELCOME TO OFFICIAL PAGE OF BORAT SAGDIYEV</h1>
+        <h1 class="text-3xl font-bold my-4 text-gray-900 dark:text-yellow-300">WELCOME TO OFFICIAL PAGE OF BORAT SAGDIYEV</h1>
     </marquee>
 
-    <main id="content" class="max-w-3xl mx-auto px-4">
+    <main id="c" class="max-w-3xl mx-auto px-4">
 
-        <div class="bg-yellow-50 p-4 rounded-lg my-4">
+        <div class="bg-yellow-50 p-4 rounded-lg my-4 dark:text-gray-900">
             <h2 class="text-2xl font-bold">My Name Borat</h2>
             <p class="my-2">This is me, <strong>Borat</strong>. I am journalist from Kazakhstan.</p>
-            <img class="photo my-4 max-w-md" src="https://live-production.wcms.abc-cdn.net.au/c9eb148e2c9f2ec44c4b8e505d4456e6?impolicy=wcms_crop_resize&cropH=258&cropW=387&xPos=6&yPos=0&width=862&height=575" alt="A handsome man from Kazakhstan.">
+            <img 
+                class="photo my-4 max-w-md rounded-lg shadow-md" 
+                src="https://live-production.wcms.abc-cdn.net.au/c9eb148e2c9f2ec44c4b8e505d4456e6?impolicy=wcms_crop_resize&cropH=258&cropW=387&xPos=6&yPos=0&width=862&height=575" 
+                alt="A handsome man from Kazakhstan."
+                onmouseover="this.src='https://imgcdn1.oe24.at/ecg4230h.jpg/1600x900Crop/641.876.387'"
+                onmouseout="this.src='https://live-production.wcms.abc-cdn.net.au/c9eb148e2c9f2ec44c4b8e505d4456e6?impolicy=wcms_crop_resize&cropH=258&cropW=387&xPos=6&yPos=0&width=862&height=575'"
+            >
             <p><em>Great success!</em></p>
         </div>
 
-        <div class="bg-sky-50 p-4 rounded-lg my-4">
+        <div class="bg-sky-50 p-4 rounded-lg my-4 dark:text-gray-900">
             <h2 class="text-2xl font-bold">My Hobbies</h2>
             <ol class="list-decimal list-inside my-2">
                 <li>Table Tennis.</li>
@@ -29,22 +48,59 @@
             </ol>
         </div>
 
-        <div class="bg-green-50 p-4 rounded-lg my-4">
+        <div class="bg-green-50 p-4 rounded-lg my-4 dark:text-gray-900">
             <h2 class="text-2xl font-bold">About My Country: Kazakhstan</h2>
             <p class="my-2">Kazakhstan is <strong>greatest country</strong></p>
             <p class="note">Please you come visit. It is very nice.</p>
         </div>
 
-        <div class="bg-yellow-50 p-4 rounded-lg my-4">
+        <div class="bg-yellow-50 p-4 rounded-lg my-4 dark:text-gray-900">
             <h2 class="text-2xl font-bold">You Want Talk To Me?</h2>
             <p class="my-2">send electronic letter <a href="mailto:borat@gmail.com" class="text-blue-600 hover:underline">borat@gmail.com</a></p>
         </div>
 
+        <div class="bg-purple-50 p-4 rounded-lg my-4 dark:text-gray-900">
+            <h2 class="text-2xl font-bold">Wise Words from Borat</h2>
+            <button id="qb" class="text-blue-600 my-2 hover:underline focus:outline-none">Get Wise Word</button>
+            <p id="qd" class="my-2 italic text-lg text-gray-800">"Click button for great wisdom."</p>
+        </div>
+
     </main>
 
-    <footer class="text-center mt-8 pt-4 border-t">
-        <p class="text-sm text-gray-600">This website was construct by me, Borat Sagdiyev. All rights protected.</p>
+    <footer class="text-center mt-8 pt-4 border-t border-gray-300 dark:border-gray-700">
+        <p class="text-sm text-gray-600 dark:text-gray-400">This website was construct by me, Borat Sagdiyev. All rights protected.</p>
     </footer>
+
+    <button id="tt" class="fixed bottom-4 right-4 bg-white text-black dark:bg-black dark:text-white border-4 border-black p-3 rounded-lg shadow-lg focus:outline-none w-12 h-12 flex items-center justify-center font-bold text-xl">
+        <span id="tid" class="block dark:hidden">D</span>
+        <span id="til" class="hidden dark:block">L</span>
+    </button>
+
+    <script>
+        const btnTh = document.getElementById('tt');
+        
+        btnTh.addEventListener('click', function() {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        const btnQ = document.getElementById('qb');
+        const dispQ = document.getElementById('qd');
+
+        const quotes = [
+            "great success",
+            "very nice!",
+            "this my wife",
+            "kazakhstan is greatest country in the world",
+            "It is nice!",
+        ];
+
+        btnQ.addEventListener('click', function() {
+            const idx = Math.floor(Math.random() * quotes.length);
+            dispQ.textContent = '"' + quotes[idx] + '"';
+        });
+    </script>
 
 </body>
 </html>
+
+
