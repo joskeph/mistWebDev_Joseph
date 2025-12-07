@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE REVIEW</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Courier New', Courier, monospace; background-color: #fdf6e3; }
+        .brutal-box { border: 3px solid black; box-shadow: 5px 5px 0px black; }
+        .brutal-btn { border: 2px solid black; transition: all 0.1s; box-shadow: 3px 3px 0px black; }
+        .brutal-btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0px black; }
+    </style>
+</head>
+<body class="text-black p-4">
+
+    <header class="mb-8 border-b-4 border-black pb-4 flex justify-between items-center bg-yellow-300 p-4 brutal-box">
+        <h1 class="text-4xl font-black tracking-tighter">MOVIE REVIEW</h1>
+        <nav class="space-x-4">
+            <a href="index.html" class="font-bold underline decoration-2 hover:bg-black hover:text-white p-1">HOME</a>
+            <a href="movies.html" class="font-bold underline decoration-2 hover:bg-black hover:text-white p-1">MOVIES</a>
+        </nav>
+    </header>
+
+    <section class="mb-12 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-pink-300 p-12 brutal-box flex flex-col justify-center">
+            <h2 class="text-6xl font-bold leading-none mb-4">PURE<br>CINEMA</h2>
+            <p class="text-xl font-bold bg-white inline-block border-2 border-black p-2 self-start">NO FLUFF. JUST FILMS.</p>
+        </div>
+        <div class="bg-blue-300 p-8 brutal-box flex items-center justify-center">
+            <div class="text-center">
+                <div class="text-8xl mb-2">👁️</div>
+                <h3 class="text-2xl font-bold uppercase">Watch. Judge. Repeat.</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-12">
+        <h3 class="text-3xl font-black mb-4 uppercase bg-green-300 inline-block border-2 border-black p-2">Top Picks</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="border-2 border-black p-4 bg-white hover:bg-black hover:text-white transition">
+                <span class="block text-2xl font-bold">01</span>
+                <span class="block font-bold">GODFATHER</span>
+            </div>
+            <div class="border-2 border-black p-4 bg-white hover:bg-black hover:text-white transition">
+                <span class="block text-2xl font-bold">02</span>
+                <span class="block font-bold">PARASITE</span>
+            </div>
+            <div class="border-2 border-black p-4 bg-white hover:bg-black hover:text-white transition">
+                <span class="block text-2xl font-bold">03</span>
+                <span class="block font-bold">AKIRA</span>
+            </div>
+            <div class="border-2 border-black p-4 bg-white hover:bg-black hover:text-white transition">
+                <span class="block text-2xl font-bold">04</span>
+                <span class="block font-bold">PULP FICTION</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-8 bg-orange-300 p-8 brutal-box text-center">
+        <h2 class="text-4xl font-bold mb-6">EXPLORE THE ARCHIVE</h2>
+        <a href="movies.html" class="brutal-btn bg-white text-black text-xl font-bold py-3 px-8 inline-block hover:bg-black hover:text-white">ENTER VAULT</a>
+    </section>
+
+    <footer class="border-t-4 border-black pt-4 text-center font-bold">
+        <p>© 2025 MOVIE REVIEW CORP. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+</body>
+</html>
